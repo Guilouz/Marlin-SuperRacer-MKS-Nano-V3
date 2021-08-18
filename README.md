@@ -8,7 +8,7 @@ If you like my job, don't hesitate to support me by paying me a 🍺 or a ☕. T
 
 <br /><br /><br /><br /><br />
 
-**Marlin 2.0.8 Firmware configured for FLSUN Super Racer with MKS Nano V3 motherboard. Based on FLSUN sources.**
+**Marlin 2.0.8 Firmware configured for FLSUN Super Racer with MKS Robin Nano V3 motherboard. Based on FLSUN sources.**
 
 <br /> <br /> <br /> <br /> <br />
 
