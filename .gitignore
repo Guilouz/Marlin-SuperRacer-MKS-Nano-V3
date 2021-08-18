@@ -80,7 +80,6 @@ tags
 # C
 #
 # Object files
-*.o
 *.ko
 *.obj
 
