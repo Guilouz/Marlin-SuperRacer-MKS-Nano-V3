@@ -62,9 +62,9 @@ If you like my job, don't hesitate to support me by paying me a 🍺 or a ☕. T
     - `G1 E100 F100` for extruding 100mm.
     - Wait until the end of the extrusion and measure if there is still 20mm of the line on the filament until the filament inlet otherwise apply this calculation:
         - To obtain extrusion length: `120 - (value measured between the line and the filament inlet)`
-        - To obtain number of steps to have extruded 100mm: `(value of E-steps/mm) x 100`. E-Step default value is 415.
-        - To obtain the new E-setp: `(number of steps to have extruded 100mm) / (extrusion length)`
-    - `M92 E(new E-step/mm)`
+        - To obtain number of steps to have extruded 100mm: `(value of E-steps/mm) x 100`. Default E-Steps value is 415.
+        - To obtain the new E-steps/mm: `(number of steps to have extruded 100mm) / (extrusion length)`
+    - `M92 E(new E-steps/mm)`
     - Then `M500` to save.
 - Start auto-leveling from the screen menus.
 
