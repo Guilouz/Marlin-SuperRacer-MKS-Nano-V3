@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "jlink",
+            "cwd": "${workspaceRoot}",
+            "executable": "d:/Mks-Robin-Nano-Marlin2.0-Firmware/.pio/build/mks_robin_pro_v2/firmware.elf",
+            "name": "Debug (J-Link)",
+            "device": "STM32F407ZE",
+            "interface": "swd",
+            //"ipAddress": null,
+            //"serialNumber": null,
+        }
+    ]
+}
+#2021.3.25 - 15:15

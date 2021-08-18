@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "jlink",
+            "cwd": "${workspaceRoot}",
+            "executable": "d:/Mks-Robin-Nano-Marlin2.0-Firmware/.pio/build/mks_robin_nano_v3_usb_flash_drive_msc/firmware.elf",
+            "name": "Debug (J-Link)",
+            "device": "STM32F407VG",
+            "interface": "swd",
+            //"ipAddress": null,
+            //"serialNumber": null,
+        }
+    ]
+}

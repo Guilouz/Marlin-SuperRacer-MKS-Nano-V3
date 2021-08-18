@@ -1,0 +1,36 @@
+// AUTOMATICALLY GENERATED FILE. PLEASE DO NOT MODIFY IT MANUALLY
+//
+// PIO Unified Debugger
+//
+// Documentation: https://docs.platformio.org/page/plus/debugging.html
+// Configuration: https://docs.platformio.org/page/projectconf/section_env_debug.html
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug",
+            "executable": "/Users/cyril/Desktop/FLSUN SuperRacer/Firmwares/Firmware Custom/Sources/.pio/build/mks_robin_nano_v3_usb_flash_drive_msc/firmware.elf",
+            "projectEnvName": "mks_robin_nano_v3_usb_flash_drive_msc",
+            "toolchainBinDir": "/Users/cyril/.platformio/packages/toolchain-gccarmnoneeabi@1.90201.191206/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "/Users/cyril/.platformio/platforms/ststm32@10.0.1/misc/svd/STM32F40x.svd",
+            "preLaunchTask": {
+                "type": "PlatformIO",
+                "task": "Pre-Debug (mks_robin_nano_v3_usb_flash_drive_msc)"
+            }
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (skip Pre-Debug)",
+            "executable": "/Users/cyril/Desktop/FLSUN SuperRacer/Firmwares/Firmware Custom/Sources/.pio/build/mks_robin_nano_v3_usb_flash_drive_msc/firmware.elf",
+            "projectEnvName": "mks_robin_nano_v3_usb_flash_drive_msc",
+            "toolchainBinDir": "/Users/cyril/.platformio/packages/toolchain-gccarmnoneeabi@1.90201.191206/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "/Users/cyril/.platformio/platforms/ststm32@10.0.1/misc/svd/STM32F40x.svd"
+        }
+    ]
+}
