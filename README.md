@@ -6,11 +6,11 @@ If you like my job, don't hesitate to support me by paying me a 🍺 or a ☕. T
 <img align="left" width=600 src="https://user-images.githubusercontent.com/12702322/129816796-0f8a7844-0c04-45f5-aee3-321125e5ebe4.jpg" />
 
 
-<br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
 
 **Marlin 2.0.8 Firmware configured for FLSUN Super Racer with MKS Nano V3 motherboard. Based on FLSUN sources.**
 
-<br /> <br />
+<br /> <br /> <br />
 
 ## Main features:
 
