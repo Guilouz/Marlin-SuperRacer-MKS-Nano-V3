@@ -3,7 +3,8 @@ If you like my job, don't hesitate to support me by paying me a 🍺 or a ☕. T
 
  [ ![Download](https://user-images.githubusercontent.com/12702322/115148445-e5a40100-a05f-11eb-8552-c1f5d4355987.png) ](https://www.paypal.me/CyrilGuislain)
 
-<img align="left" width=600 src="https://user-images.githubusercontent.com/12702322/116473468-7b693880-a877-11eb-8783-5eccf0b5fbc0.jpg" />
+<img align="left" width=600 src="https://user-images.githubusercontent.com/12702322/129816796-0f8a7844-0c04-45f5-aee3-321125e5ebe4.jpg" />
+
 
 <br /><br /><br /><br /><br /><br /><br /><br />
 
@@ -48,12 +49,13 @@ If you like my job, don't hesitate to support me by paying me a 🍺 or a ☕. T
 - Launch a Nozzle PID in a terminal:
     - `M303 E0 S220 C8`
     - Retrieve the values `Kp`, `Ki` and `Kd` then:
-    - `M301 P**Kp** I**Ki** D**Kd**`
+    - `M301 PKp IKi DKd![6b38ba55-e34a-47ea-ba35-4af612c83efb](https://user-images.githubusercontent.com/12702322/129816780-b5db33b5-05a6-4ea0-9b4b-7dc028d80fb2.jpg)
+`
     - Then `M500` to save.
 - Launch a Bed PID in a terminal:
     - `M303 E-1 S90 C8`
     - Retrieve the values `Kp`, `Ki` and `Kd` then:
-    - `M304 P**Kp** I**Ki** D**Kd**`
+    - `M304 PKp IKi DKd`
     - Then `M500` to save.
 - Launch an extruder calibration in a terminal:
     - Make a pencil mark at 120mm on the filament from the hole on the top of the printer (where we insert the filament)
@@ -63,7 +65,7 @@ If you like my job, don't hesitate to support me by paying me a 🍺 or a ☕. T
         - To obtain extrusion length: `120 - (value measured between the line and the filament inlet)`
         - To obtain number of steps to have extruded 100mm: `(value of E-steps/mm) x 100`. E-Step default value is 415.
         - To obtain the new E-setp: `(number of steps to have extruded 100mm) / (extrusion length)`
-    - `M92 E**(new E-step/mm)**`
+    - `M92 E(new E-step/mm)`
     - Then `M500` to save.
 - Start auto-leveling from the screen menus.
 
@@ -71,6 +73,6 @@ Link for a terminal: [Printrun (ex Pronterface)](https://github.com/kliment/Prin
 
 ## Possible changes :
 
-If you need to make any changes, please read this for compilation: 
+If you need to make any changes, please read this for compilation: [here](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/tree/main/_README)
 
 Use VSCode et PlatformIO for compilation (see [ici](https://marlinfw.org/docs/basics/install_platformio_vscode.html)).
