@@ -10,7 +10,7 @@ If you like my job, don't hesitate to support me by paying me a 🍺 or a ☕. T
 
 **Marlin 2.0.8 Firmware configured for FLSUN Super Racer with MKS Nano V3 motherboard. Based on FLSUN sources.**
 
-<br /> <br /> <br />
+<br /> <br /> <br /> <br /> <br />
 
 ## Main features:
 
@@ -49,8 +49,7 @@ If you like my job, don't hesitate to support me by paying me a 🍺 or a ☕. T
 - Launch a Nozzle PID in a terminal:
     - `M303 E0 S220 C8`
     - Retrieve the values `Kp`, `Ki` and `Kd` then:
-    - `M301 PKp IKi DKd![6b38ba55-e34a-47ea-ba35-4af612c83efb](https://user-images.githubusercontent.com/12702322/129816780-b5db33b5-05a6-4ea0-9b4b-7dc028d80fb2.jpg)
-`
+    - `M301 PKp IKi DKd`
     - Then `M500` to save.
 - Launch a Bed PID in a terminal:
     - `M303 E-1 S90 C8`
