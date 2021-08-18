@@ -72,6 +72,6 @@ Link for a terminal: [Printrun (ex Pronterface)](https://github.com/kliment/Prin
 
 ## Possible changes :
 
-If you need to make any changes, please read this for compilation: [here](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/tree/main/_README)
+If you need to make any changes in sources files, please read this for compilation: [here](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/tree/main/_README)
 
 Use VSCode et PlatformIO for compilation (see [ici](https://marlinfw.org/docs/basics/install_platformio_vscode.html)).
