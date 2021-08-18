@@ -40,12 +40,12 @@ If you like my job, don't hesitate to support me by paying me a 🍺 or a ☕. T
 
 ## Installation procedure:
 
-- Do an EEPROM reset before flashing the new firmware (command M502 followed by command M500 in a terminal or with the TFT screen).
+- Do an EEPROM reset before flashing the new firmware (command `M502` followed by command `M500` in a terminal or with the TFT screen).
 - Copy `Robin_nano_v3.bin` file to the root of the microSD card (max capacity 32GB, formatted in FAT32, allocation unit size 4096).
 - With printer off, insert the microSD card into the dedicated port on the motherboard and turn on the printer.
 - Flash procedure starts (without displaying anything on the screen) and lasts a few seconds.
 - Check contents of the microSD card, `Robin_nano_v3.bin` file has been renamed to `ROBIN_NANO_V3.CUR` which indicates that the flash was successful.
-- Do an EEPROM reset again (command M502 followed by command M500 in a terminal or with the TFT screen).
+- Do an EEPROM reset again (command `M502` followed by command `M500` in a terminal or with the TFT screen).
 - Launch a Nozzle PID in a terminal:
     - `M303 E0 S220 C8`
     - Retrieve the values `Kp`, `Ki` and `Kd` then:
