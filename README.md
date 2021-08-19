@@ -69,6 +69,8 @@ If you like my job, don't hesitate to support me by paying me a 🍺 or a ☕. T
         - To obtain the new E-steps/mm: `(number of steps to have extruded 100mm) / (extrusion length)`
     - `M92 E(new E-steps/mm)`
     - Then `M500` to save.
+- Launch a Delta Calibration a wait until end of process :
+    - `G33`
 - Start auto-leveling from the TFT screen menu.
 
 Link for a terminal: [Printrun (ex Pronterface)](https://github.com/kliment/Printrun/releases)
