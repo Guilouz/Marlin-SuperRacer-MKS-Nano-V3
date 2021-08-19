@@ -71,6 +71,7 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
     - Then `M500` to save.
 - Launch a Delta Calibration a wait until end of process :
     - `G33`
+    - Then `M500` to save.
 - Start auto-leveling from the TFT screen menu and adjust Z-Offset. Don't forget to save.
 
 Link for a terminal: [Printrun (ex Pronterface)](https://github.com/kliment/Printrun/releases)
