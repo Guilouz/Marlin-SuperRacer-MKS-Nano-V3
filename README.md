@@ -47,6 +47,7 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
 - With printer off, insert the microSD card into the dedicated port on the motherboard and turn on the printer.
 - Flash procedure starts (without displaying anything on the screen) and lasts a few seconds.
 - Check contents of the microSD card, `Robin_nano_v3.bin` file has been renamed to `ROBIN_NANO_V3.CUR` which indicates that the flash was successful.
+- It's possible after flash you loose text on TFT screen, select your language again and save.
 - Do an EEPROM reset again (command `M502` followed by command `M500` in a terminal or with the TFT screen).
 - Restart the printer.
 - Launch a Nozzle PID in a terminal:
