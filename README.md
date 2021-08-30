@@ -70,7 +70,7 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
         - To obtain extrusion length: `120 - (value measured between the line and the filament inlet)`
         - To obtain number of steps to have extruded 100mm: `(value of E-steps/mm) x 100`. Default E-Steps value is 415.
         - To obtain the new E-steps/mm: `(number of steps to have extruded 100mm) / (extrusion length)`
-    - `M92 E`**(new E-steps/mm)**
+    - `M92 E`**`(new E-steps/mm)`**
     - Then `M500` to save.
 - Launch a Delta Calibration a wait until end of process :
     - **Make sure to connect bed level probe before to start the following command**.
