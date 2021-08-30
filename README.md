@@ -62,7 +62,7 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
     - Then `M500` to save.
 - Launch an extruder calibration in a terminal:
     - Heat your hotend to its usual operating temperature :
-    - `M109 Sxxx` where `xxx' is temperature
+    - `M109 Sxxx` where `xxx` is temperature
     - Make a pencil mark at 120mm on the filament from the hole on the top of the printer (where we insert the filament)
     - `M83` to switch to relative mode.
     - `G1 E100 F100` for extruding 100mm.
