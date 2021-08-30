@@ -62,7 +62,7 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
     - Then `M500` to save.
 - Launch an extruder calibration in a terminal:
     - Heat your hotend to its usual operating temperature :
-    - `M109 Sxxx` where `xxx` is temperature
+    - `M109 S`**xxx** where `xxx` is temperature
     - Make a pencil mark at 120mm on the filament from the hole on the top of the printer (where we insert the filament)
     - `M83` to switch to relative mode.
     - `G1 E100 F100` for extruding 100mm.
@@ -70,7 +70,7 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
         - To obtain extrusion length: `120 - (value measured between the line and the filament inlet)`
         - To obtain number of steps to have extruded 100mm: `(value of E-steps/mm) x 100`. Default E-Steps value is 415.
         - To obtain the new E-steps/mm: `(number of steps to have extruded 100mm) / (extrusion length)`
-    - `M92 E(new E-steps/mm)`
+    - `M92 E`**(new E-steps/mm)**
     - Then `M500` to save.
 - Launch a Delta Calibration a wait until end of process :
     - **Make sure to connect bed level probe before to start the following command**
