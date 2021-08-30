@@ -53,12 +53,12 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
 - Launch a Nozzle PID in a terminal:
     - `M303 E0 S220 C8`
     - Retrieve the values `Kp`, `Ki` and `Kd` then:
-    - `M301 PKp IKi DKd`
+    - `M301 P`**Kp** `I`**Ki** `D`**Kd**
     - Then `M500` to save.
 - Launch a Bed PID in a terminal:
     - `M303 E-1 S90 C8`
     - Retrieve the values `Kp`, `Ki` and `Kd` then:
-    - `M304 PKp IKi DKd`
+    - `M304 P`**Kp** `I`**Ki** `D`**Kd**
     - Then `M500` to save.
 - Launch an extruder calibration in a terminal:
     - Heat your hotend to its usual operating temperature :
