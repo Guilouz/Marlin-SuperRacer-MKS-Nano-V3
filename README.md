@@ -73,7 +73,7 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
     - `M92 E`**(new E-steps/mm)**
     - Then `M500` to save.
 - Launch a Delta Calibration a wait until end of process :
-    - **Make sure to connect bed level probe before to start the following command**
+    - **Make sure to connect bed level probe before to start the following command**.
     - `G33`
     - Then `M500` to save.
 - Start auto-leveling from the TFT screen menu and adjust Z-Offset. Don't forget to save.
