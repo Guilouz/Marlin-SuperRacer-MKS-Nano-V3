@@ -53,14 +53,16 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
 - Launch a Nozzle PID in a terminal:
     - `M303 E0 S220 C8`
     - Retrieve the values `Kp`, `Ki` and `Kd` then:
-    - `M301 PKp IKi DKd`
+    - `M301 P`**Kp** `I`**Ki** `D`**Kd**
     - Then `M500` to save.
 - Launch a Bed PID in a terminal:
     - `M303 E-1 S90 C8`
     - Retrieve the values `Kp`, `Ki` and `Kd` then:
-    - `M304 PKp IKi DKd`
+    - `M304 P`**Kp** `I`**Ki** `D`**Kd**
     - Then `M500` to save.
 - Launch an extruder calibration in a terminal:
+    - Heat your hotend to its usual operating temperature :
+    - `M109 S`**xxx** where `xxx` is temperature
     - Make a pencil mark at 120mm on the filament from the hole on the top of the printer (where we insert the filament)
     - `M83` to switch to relative mode.
     - `G1 E100 F100` for extruding 100mm.
@@ -68,9 +70,10 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
         - To obtain extrusion length: `120 - (value measured between the line and the filament inlet)`
         - To obtain number of steps to have extruded 100mm: `(value of E-steps/mm) x 100`. Default E-Steps value is 415.
         - To obtain the new E-steps/mm: `(number of steps to have extruded 100mm) / (extrusion length)`
-    - `M92 E(new E-steps/mm)`
+    - `M92 E`**(new E-steps/mm)**
     - Then `M500` to save.
 - Launch a Delta Calibration a wait until end of process :
+    - **Make sure to connect bed level probe before to start the following command**.
     - `G33`
     - Then `M500` to save.
 - Start auto-leveling from the TFT screen menu and adjust Z-Offset. Don't forget to save.
@@ -81,4 +84,4 @@ Link for a terminal: [Printrun (ex Pronterface)](https://github.com/kliment/Prin
 
 If you need to make any changes in sources files, please read this for compilation: [here](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/tree/main/_README)
 
-Use VSCode et PlatformIO for compilation (see [ici](https://marlinfw.org/docs/basics/install_platformio_vscode.html)).
+Use VSCode et PlatformIO for compilation (see [here](https://marlinfw.org/docs/basics/install_platformio_vscode.html)).
