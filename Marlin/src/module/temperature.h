@@ -384,8 +384,6 @@ class Temperature {
 
   private:
 
-    TERN_(EARLY_WATCHDOG, static bool inited);   // If temperature controller is running
-
     static volatile bool raw_temps_ready;
 
     TERN_(WATCH_HOTENDS, static hotend_watch_t watch_hotend[HOTENDS]);
