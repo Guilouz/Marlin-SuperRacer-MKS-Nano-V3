@@ -89,7 +89,7 @@ Link for a terminal: [Printrun (ex Pronterface)](https://github.com/kliment/Prin
   - In Configuration.h : `#define SERIAL_PORT_2 0`
   - In Configuration_adv.h : `#define E0_AUTO_FAN_PIN P2_04`
 
-- If you want to use `SD CARD` port :
+- If you want to use `microSD` port :
   - In Configuration_adv.h : `//#define USB_FLASH_DRIVE_SUPPORT`
 
 - If you want to use `USB` port :
