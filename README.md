@@ -1,7 +1,7 @@
 
-If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
+If you like my job, you can support my :smiley_cat: by paying me a :canned_food: or a :sushi:. Thanks 🙂
 
- [ ![Download](https://user-images.githubusercontent.com/12702322/115148445-e5a40100-a05f-11eb-8552-c1f5d4355987.png) ](https://www.paypal.me/CyrilGuislain)
+ [ ![Download](https://user-images.githubusercontent.com/12702322/115148445-e5a40100-a05f-11eb-8552-c1f5d4355987.png) ](https://paypal.me/milothecat2)
 
 <img align="left" width=600 src="https://user-images.githubusercontent.com/12702322/129816796-0f8a7844-0c04-45f5-aee3-321125e5ebe4.jpg" />
 
@@ -14,6 +14,7 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
 
 ## Main features:
 
+**- EEPROM Storage should now work and persist (no more missing text, language resetting, or loss of Z0 and other calibrations)**
 - MKS Robin Nano V3 motherboard support
 - TMC2209 / TMC2226 UART drivers support
 - Nozzle & Bed PID support
