@@ -32,6 +32,8 @@
 #include <stdlib.h>
 
 void stop();
+void setFLSunLanguage(const uint16_t lang);
+void setFLSunHours(const millis_t time);
 
 // Pass true to keep steppers from timing out
 void idle(TERN_(ADVANCED_PAUSE_FEATURE, bool no_stepper_sleep=false));
