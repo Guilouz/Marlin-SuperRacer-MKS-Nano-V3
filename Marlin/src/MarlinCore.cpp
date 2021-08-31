@@ -882,7 +882,9 @@ inline void tmc_standby_setup() {
  *    • Max7219
  */
 void setup() {
-
+  #ifdef FASTIO_INIT
+    FASTIO_INIT();
+  #endif
   tmc_standby_setup();  // TMC Low Power Standby pins must be set early or they're not usable
 
   #if ENABLED(MARLIN_DEV_MODE)
