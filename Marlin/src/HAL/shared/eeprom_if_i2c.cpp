@@ -74,9 +74,10 @@ static uint8_t _eeprom_calc_device_address(uint8_t * const pos) {
 
 static void _eeprom_begin(uint8_t * const pos) {
   const unsigned eeprom_address = (unsigned)pos;
-  Wire.beginTransmission(eeprom_device_address);
-  Wire.write(int(eeprom_address >> 8));   // Address High
-  Wire.write(int(eeprom_address & 0xFF)); // Address Low
+  Wire.beginTransmission(_eeprom_calc_device_address(pos));
+  if (!SMALL_EEPROM)
+    Wire.write(uint8_t((eeprom_address >> 8) & 0xFF));  // Address High, if needed
+  Wire.write(uint8_t(eeprom_address & 0xFF));           // Address Low
 }
 
 void eeprom_write_byte(uint8_t *pos, uint8_t value) {
@@ -92,7 +93,7 @@ void eeprom_write_byte(uint8_t *pos, uint8_t value) {
 uint8_t eeprom_read_byte(uint8_t *pos) {
   _eeprom_begin(pos);
   Wire.endTransmission();
-  Wire.requestFrom(eeprom_device_address, (byte)1);
+  Wire.requestFrom(_eeprom_calc_device_address(pos), (byte)1);
   return Wire.available() ? Wire.read() : 0xFF;
 }
 
