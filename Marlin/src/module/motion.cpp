@@ -387,12 +387,10 @@ void _internal_move_to_destination(const feedRate_t &fr_mm_s/*=0.0f*/
     planner.e_factor[active_extruder] = 1.0f;
   #endif
 
-  #if IS_KINEMATIC
-    if (is_fast)
-      prepare_fast_move_to_destination();
-    else
-  #endif
-      prepare_line_to_destination();
+  if (TERN0(IS_KINEMATIC, is_fast))
+    TERN(IS_KINEMATIC, prepare_fast_move_to_destination(), NOOP);
+  else
+    prepare_line_to_destination();
 
   feedrate_mm_s = old_feedrate;
   feedrate_percentage = old_pct;
