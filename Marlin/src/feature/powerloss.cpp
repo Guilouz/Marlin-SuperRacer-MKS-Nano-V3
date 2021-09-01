@@ -143,11 +143,11 @@ void PrintJobRecovery::load() {//改动
 void PrintJobRecovery::prepare() {//改动
   card.getAbsFilename(info.sd_filename);  // SD filename
   sd_filename_size = strlen(info.sd_filename);//新增
-  persistentStore.write_data(983, (uint8_t*)&sd_filename_size, sizeof(sd_filename_size));
+  //persistentStore.write_data(983, (uint8_t*)&sd_filename_size, sizeof(sd_filename_size));
   MSerial.println(sd_filename_size);
   for(int i = 0;i < sd_filename_size;i++)
   {
-    persistentStore.write_data(985 + i, (uint8_t*)&info.sd_filename[i], sizeof(info.sd_filename[i]));
+    //persistentStore.write_data(985 + i, (uint8_t*)&info.sd_filename[i], sizeof(info.sd_filename[i]));
   }//新增
   cmd_sdpos = 0;
 }
@@ -247,7 +247,7 @@ void PrintJobRecovery::save(const bool force/*=false*/, const float zraise/*=0*/
 void PrintJobRecovery::write_eeprom()//新增
 {
   int eeprom_pos_duandian = 900;
-    persistentStore.write_data(eeprom_pos_duandian, (uint8_t*)&info.valid_head, sizeof(info.valid_head));
+    /*persistentStore.write_data(eeprom_pos_duandian, (uint8_t*)&info.valid_head, sizeof(info.valid_head));
     eeprom_pos_duandian += sizeof(info.valid_head);
     persistentStore.write_data(eeprom_pos_duandian, (uint8_t*)&info.valid_foot, sizeof(info.valid_foot));
     eeprom_pos_duandian += sizeof(info.valid_foot);
@@ -292,7 +292,7 @@ void PrintJobRecovery::write_eeprom()//新增
     persistentStore.write_data(eeprom_pos_duandian, (uint8_t*)&info.sdpos, sizeof(info.sdpos));
     eeprom_pos_duandian += sizeof(info.sdpos);
     persistentStore.write_data(eeprom_pos_duandian, (uint8_t*)&info.flag_duandian, sizeof(info.flag_duandian));
-    eeprom_pos_duandian += sizeof(info.flag_duandian);
+    eeprom_pos_duandian += sizeof(info.flag_duandian);*/
 }
 #if PIN_EXISTS(POWER_LOSS)
 
