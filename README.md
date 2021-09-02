@@ -27,7 +27,7 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
 - G26 - Mesh Validation Pattern support
 - G33 - Delta Auto Calibration support
 - Enabled Hotend idle timeout (15 minutes)
-- Disabled Power Loss Recovery by default. To avoid slowdowns at the end of each layer and preserve SD card / USB drive. (Enable it with `M413 S1` & `M500` in a terminal)
+- Disabled Power Loss Recovery because not correctly implemented, repeated writes to the EEPROM are performed. Not good for EEPROM.
 - Binary file transfert support to transfer and update the firmware remotely
 - Enabled host prompt support
 - Enabled Firmware Info with M115
@@ -81,6 +81,20 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
 Link for a terminal: [Printrun (ex Pronterface)](https://github.com/kliment/Printrun/releases)
 
 ## Possible changes :
+
+- If you have `SKR 1.3` motherboard, set these values :
+  - In platformio.ini : `default_envs = LPC1768`
+  - In Configuration.h : `#define MOTHERBOARD BOARD_BTT_SKR_V1_3`
+  - In Configuration.h : `#define SERIAL_PORT -1`
+  - In Configuration.h : `#define SERIAL_PORT_2 0`
+  - In Configuration_adv.h : `#define E0_AUTO_FAN_PIN P2_04`
+
+- If you want to use `microSD` port :
+  - In Configuration_adv.h : `//#define USB_FLASH_DRIVE_SUPPORT`
+
+- If you want to use `USB` port :
+  - In Configuration_adv.h : `#define USB_FLASH_DRIVE_SUPPORT`
+
 
 If you need to make any changes in sources files, please read this for compilation: [here](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/tree/main/_README)
 

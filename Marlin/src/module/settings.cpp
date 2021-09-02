@@ -284,7 +284,7 @@ typedef struct SettingsDataStruct {
     abc_float_t delta_endstop_adj;                      // M666 X Y Z
     float delta_radius,                                 // M665 R
           delta_diagonal_rod,                           // M665 L
-          segments_per_second;                          // M665 S
+          delta_segments_per_second;                          // M665 S
     abc_float_t delta_tower_angle_trim,                 // M665 X Y Z
                 delta_diagonal_rod_trim;                // M665 A B C
   #elif HAS_EXTRA_ENDSTOPS
@@ -3375,7 +3375,7 @@ void MarlinSettings::reset() {
       CONFIG_ECHO_HEADING("SCARA settings: S<seg-per-sec> P<theta-psi-offset> T<theta-offset>");
       CONFIG_ECHO_START();
       SERIAL_ECHOLNPAIR_P(
-          PSTR("  M665 S"), segments_per_second
+          PSTR("  M665 S"), delta_segments_per_second
         , SP_P_STR, scara_home_offset.a
         , SP_T_STR, scara_home_offset.b
         , SP_Z_STR, LINEAR_UNIT(scara_home_offset.z)
