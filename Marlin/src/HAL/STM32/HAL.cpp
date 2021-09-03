@@ -70,7 +70,12 @@ uint16_t HAL_adc_result;
 
 // HAL initialization task
 void HAL_init() {
-  FastIO_init();
+
+  // Ensure F_CPU is a constant expression. 
+  // If the compiler breaks here, it means that delay code that should compute at compile time will not work.
+  // So better safe than sorry here.
+  constexpr int cpuFreq = F_CPU;
+  UNUSED(cpuFreq);
 
   #if ENABLED(SDSUPPORT) && DISABLED(SDIO_SUPPORT) && (defined(SDSS) && SDSS != -1)
     OUT_WRITE(SDSS, HIGH); // Try to set SDSS inactive before any other SPI users start up
