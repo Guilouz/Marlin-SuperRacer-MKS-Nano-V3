@@ -47,6 +47,7 @@ void u8g_pb8h2_Init(u8g_pb_t *b, void *buf, u8g_uint_t width)
   u8g_pb_Clear(b);
 }
 
+static void u8g_pb8h2_set_pixel(u8g_pb_t *b, u8g_uint_t x, u8g_uint_t y, uint8_t color_index) U8G_NOINLINE;
 static void u8g_pb8h2_set_pixel(u8g_pb_t *b, u8g_uint_t x, u8g_uint_t y, uint8_t color_index)
 {
   register uint8_t mask;

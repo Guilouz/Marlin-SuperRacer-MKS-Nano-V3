@@ -12,9 +12,9 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "/Users/cyril/Desktop/FLSUN SuperRacer/Firmwares/Firmware Custom/NanoV3-TFcard/.pio/build/mks_robin_nano_v3_usb_flash_drive_msc/firmware.elf",
+            "executable": "/Users/cyril/Desktop/custome_nano_v3_TFcard_1.3/NanoV3/.pio/build/mks_robin_nano_v3_usb_flash_drive_msc/firmware.elf",
             "projectEnvName": "mks_robin_nano_v3_usb_flash_drive_msc",
-            "toolchainBinDir": "/Users/cyril/.platformio/packages/toolchain-gccarmnoneeabi@1.90201.191206/bin",
+            "toolchainBinDir": "/Users/cyril/.platformio/packages/toolchain-gccarmnoneeabi/bin",
             "internalConsoleOptions": "openOnSessionStart",
             "svdPath": "/Users/cyril/.platformio/platforms/ststm32@10.0.1/misc/svd/STM32F40x.svd",
             "preLaunchTask": {
@@ -26,9 +26,9 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "/Users/cyril/Desktop/FLSUN SuperRacer/Firmwares/Firmware Custom/NanoV3-TFcard/.pio/build/mks_robin_nano_v3_usb_flash_drive_msc/firmware.elf",
+            "executable": "/Users/cyril/Desktop/custome_nano_v3_TFcard_1.3/NanoV3/.pio/build/mks_robin_nano_v3_usb_flash_drive_msc/firmware.elf",
             "projectEnvName": "mks_robin_nano_v3_usb_flash_drive_msc",
-            "toolchainBinDir": "/Users/cyril/.platformio/packages/toolchain-gccarmnoneeabi@1.90201.191206/bin",
+            "toolchainBinDir": "/Users/cyril/.platformio/packages/toolchain-gccarmnoneeabi/bin",
             "internalConsoleOptions": "openOnSessionStart",
             "svdPath": "/Users/cyril/.platformio/platforms/ststm32@10.0.1/misc/svd/STM32F40x.svd"
         }

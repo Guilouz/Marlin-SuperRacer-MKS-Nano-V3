@@ -110,6 +110,7 @@ typedef  int16_t u8g_long_t;
     ftp://pc.fk0.name/pub/books/programming/bezier-ellipse.pdf
     Foley, Computer Graphics, p 90
 */
+static void u8g_draw_ellipse_section(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t x0, u8g_uint_t y0, uint8_t option) U8G_NOINLINE;
 static void u8g_draw_ellipse_section(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t x0, u8g_uint_t y0, uint8_t option)
 {
     /* upper right */
@@ -250,6 +251,7 @@ void u8g_DrawEllipse(u8g_t *u8g, u8g_uint_t x0, u8g_uint_t y0, u8g_uint_t rx, u8
   u8g_draw_ellipse(u8g, x0, y0, rx, ry, option);
 }
 
+static void u8g_draw_filled_ellipse_section(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t x0, u8g_uint_t y0, uint8_t option) U8G_NOINLINE;
 static void u8g_draw_filled_ellipse_section(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t x0, u8g_uint_t y0, uint8_t option)
 {
     /* upper right */

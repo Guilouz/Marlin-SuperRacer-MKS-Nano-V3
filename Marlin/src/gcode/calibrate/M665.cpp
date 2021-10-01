@@ -55,6 +55,12 @@
     if (parser.seen('A')) delta_diagonal_rod_trim.a += parser.value_float();
     if (parser.seen('B')) delta_diagonal_rod_trim.b += parser.value_float();
     if (parser.seen('C')) delta_diagonal_rod_trim.c += parser.value_float();
+    char str_1[6] = "0";//新增，M665 A B C 显示
+    char str_2[6] = "0";
+    dtostrf(delta_diagonal_rod_trim.a,4,2,str_1);
+    dtostrf(delta_diagonal_rod_trim.c,4,2,str_2);
+    print_thr_adress_string(0x35,0x40,str_1);
+    print_thr_adress_string(0x35,0x50,str_2);//新增，M665 A B C 显示
     recalc_delta_settings();
   }
 

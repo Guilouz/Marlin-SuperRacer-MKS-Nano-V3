@@ -284,7 +284,7 @@ typedef struct SettingsDataStruct {
     abc_float_t delta_endstop_adj;                      // M666 X Y Z
     float delta_radius,                                 // M665 R
           delta_diagonal_rod,                           // M665 L
-          delta_segments_per_second;                          // M665 S
+          delta_segments_per_second;                    // M665 S
     abc_float_t delta_tower_angle_trim,                 // M665 X Y Z
                 delta_diagonal_rod_trim;                // M665 A B C
   #elif HAS_EXTRA_ENDSTOPS
@@ -622,12 +622,13 @@ void MarlinSettings::postprocess() {
    * M500 - Store Configuration
    */
   extern uint16_t Flsun_language;//新增
+  extern bool buzzer_flag;//新增
   extern millis_t total_time;//新增
   bool MarlinSettings::save() {
     float dummyf = 0;
     char ver[4] = "ERR";
 
-    if (!EEPROM_START(EEPROM_OFFSET)) return false;
+  if (!EEPROM_START(EEPROM_OFFSET)) return false;
 
     eeprom_error = false;
 
@@ -637,6 +638,7 @@ void MarlinSettings::postprocess() {
     EEPROM_SKIP(working_crc); // Skip the checksum slot
 
     working_crc = 0; // clear before first "real data"
+    persistentStore.write_data(960, (uint8_t*)&buzzer_flag, sizeof(buzzer_flag));//新增，写入蜂鸣器flag
 
     _FIELD_TEST(esteppers);
 
@@ -855,7 +857,7 @@ void MarlinSettings::postprocess() {
         EEPROM_WRITE(delta_endstop_adj);         // 3 floats
         EEPROM_WRITE(delta_radius);              // 1 float
         EEPROM_WRITE(delta_diagonal_rod);        // 1 float
-        EEPROM_WRITE(delta_segments_per_second);       // 1 float
+        EEPROM_WRITE(delta_segments_per_second); // 1 float
         EEPROM_WRITE(delta_tower_angle_trim);    // 3 floats
         EEPROM_WRITE(delta_diagonal_rod_trim);   // 3 floats
 
@@ -1440,8 +1442,10 @@ void MarlinSettings::postprocess() {
     #if HAS_MULTI_LANGUAGE
       EEPROM_WRITE(ui.language);
     #endif
-
-//FLSun Special Parameters
+    
+    //
+    // FLSun Special Parameters
+    //
     SERIAL_ECHO_MSG("settings: 1401 Flsun language is :", Flsun_language, "\"");
     _FIELD_TEST(Flsun_language);
     EEPROM_WRITE(Flsun_language);
@@ -1511,6 +1515,7 @@ void MarlinSettings::postprocess() {
     else {
       float dummyf = 0;
       working_crc = 0;  // Init to 0. Accumulated by EEPROM_READ
+      persistentStore.read_data(960, (uint8_t*)&buzzer_flag, sizeof(buzzer_flag));//新增
 
       _FIELD_TEST(esteppers);
 
@@ -1752,7 +1757,7 @@ void MarlinSettings::postprocess() {
           EEPROM_READ(delta_endstop_adj);         // 3 floats
           EEPROM_READ(delta_radius);              // 1 float
           EEPROM_READ(delta_diagonal_rod);        // 1 float
-          EEPROM_READ(delta_segments_per_second);       // 1 float
+          EEPROM_READ(delta_segments_per_second); // 1 float
           EEPROM_READ(delta_tower_angle_trim);    // 3 floats
           EEPROM_READ(delta_diagonal_rod_trim);   // 3 floats
 
@@ -2371,8 +2376,8 @@ void MarlinSettings::postprocess() {
       _FIELD_TEST(total_time);
       EEPROM_READ(total_time);
       setFLSunHours(total_time);
-      
-      
+
+
       MSerial.print("Flsun language is :");
       MSerial.println(Flsun_language);
       MSerial.print("total time is :");

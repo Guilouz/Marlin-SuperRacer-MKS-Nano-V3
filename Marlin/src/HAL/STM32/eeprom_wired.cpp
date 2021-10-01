@@ -46,7 +46,9 @@ bool PersistentStore::write_data(int &pos, const uint8_t *value, size_t size, ui
   uint16_t written = 0;
   while (size--) {
     uint8_t v = *value;
+
     uint8_t * const p = (uint8_t * const)pos;
+    //SKS Nano V3 AT24C32D EEPROM has 1M erase/write cycles! (https://www.microchip.com/en-us/product/at24c32d)
     if (v != eeprom_read_byte(p)) { // EEPROM has only ~100,000 write cycles, so only write bytes that have changed!
       eeprom_write_byte(p, v);
       if (++written & 0x7F) delay(2); else safe_delay(2); // Avoid triggering watchdog during long EEPROM writes
@@ -55,10 +57,12 @@ bool PersistentStore::write_data(int &pos, const uint8_t *value, size_t size, ui
         return true;
       }
     }
+
     crc16(crc, &v, 1);
     pos++;
     value++;
-  }
+  };
+
   return false;
 }
 

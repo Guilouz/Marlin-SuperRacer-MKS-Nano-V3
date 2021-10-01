@@ -35,8 +35,3 @@ Contains code or declarations for the u8g routines:
 - `uint8_t u8g_i2c_start(uint8_t sla)`
 - `uint8_t u8g_i2c_send_byte(uint8_t data)`
 - `void u8g_i2c_stop(void)`
-
-#### MarlinFirmware Changes
-- Empty constructors are now provided so the u8g instance can be initialized later.
-  Data members are still constructed early when the u8g object is declared static global.
-- Constructors that just take an "options" argument now *require* the argument (e.g., `U8G_I2C_OPT_NONE`) or they will be treated as default empty constructors and won't be initialized.

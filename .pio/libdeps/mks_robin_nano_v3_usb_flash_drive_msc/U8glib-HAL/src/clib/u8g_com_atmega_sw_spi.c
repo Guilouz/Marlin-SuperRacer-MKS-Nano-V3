@@ -38,6 +38,7 @@
 
 #ifdef __AVR__
 
+static void u8g_atmega_sw_spi_shift_out(u8g_t *u8g, uint8_t val) U8G_NOINLINE;
 static void u8g_atmega_sw_spi_shift_out(u8g_t *u8g, uint8_t val)
 {
   uint8_t i = 8;

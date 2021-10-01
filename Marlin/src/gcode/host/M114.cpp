@@ -189,6 +189,7 @@
  *   R - Report the realtime position instead of projected.
  */
 uint16_t Flsun_language = 1;//新增
+bool buzzer_flag = 1;//新增
 extern millis_t total_time;//新增
 void GcodeSuite::M114() {
   if(parser.seen('L'))//新增
@@ -202,6 +203,18 @@ void GcodeSuite::M114() {
   else if(parser.seen('T'))//新增
   {
     jump_to(parser.value_byte());
+  }
+  else if(parser.seen('B'))
+  {
+    buzzer_flag = parser.value_byte();
+    if(buzzer_flag)
+    {
+      enable_buzzer();
+    }
+    else
+    {
+      disable_buzzer();
+    }
   }
   else
  {

@@ -52,6 +52,15 @@
 
 
 /*===========================================*/
+/* procedures, which should not be inlined (save as much flash ROM as possible */
+
+static uint8_t pge_Next(struct pg_edge_struct *pge) PG_NOINLINE;
+static uint8_t pg_inc(pg_struct *pg, uint8_t i) PG_NOINLINE;
+static uint8_t pg_dec(pg_struct *pg, uint8_t i) PG_NOINLINE;
+static void pg_expand_min_y(pg_struct *pg, pg_word_t min_y, uint8_t pge_idx) PG_NOINLINE;
+static void pg_line_init(pg_struct * const pg, uint8_t pge_index) PG_NOINLINE;
+
+/*===========================================*/
 /* line draw algorithm */
 
 static uint8_t pge_Next(struct pg_edge_struct *pge)

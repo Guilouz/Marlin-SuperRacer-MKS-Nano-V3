@@ -41,13 +41,7 @@
 //#define U8G_I2C_WITH_NO_ACK
 
 static uint8_t u8g_i2c_err_code;
-
-#if defined(U8G_RASPBERRY_PI) \
-  || (defined(ARDUINO) && defined(__SAM3X8E__)) \
-  || !defined(U8G_HAL_LINKS)
-  static uint8_t u8g_i2c_opt;   /* U8G_I2C_OPT_NO_ACK, SAM: U8G_I2C_OPT_DEV_1 */
-#endif
-
+static uint8_t u8g_i2c_opt;   /* U8G_I2C_OPT_NO_ACK, SAM: U8G_I2C_OPT_DEV_1 */
 /*
   position values
     1: start condition

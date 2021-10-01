@@ -44,6 +44,10 @@
 #include <string.h>
 
 
+void u8g_pb32h1_Init(u8g_pb_t *b, void *buf, u8g_uint_t width) U8G_NOINLINE;
+void u8g_pb32h1_set_pixel(u8g_pb_t *b, u8g_uint_t x, u8g_uint_t y, uint8_t color_index) U8G_NOINLINE;
+void u8g_pb32h1_SetPixel(u8g_pb_t *b, const u8g_dev_arg_pixel_t * const arg_pixel) U8G_NOINLINE ;
+void u8g_pb32h1_Set8PixelStd(u8g_pb_t *b, u8g_dev_arg_pixel_t *arg_pixel) U8G_NOINLINE;
 uint8_t u8g_dev_pb8h1_base_fn(u8g_t *u8g, u8g_dev_t *dev, uint8_t msg, void *arg);
 
 void u8g_pb32h1_Clear(u8g_pb_t *b)

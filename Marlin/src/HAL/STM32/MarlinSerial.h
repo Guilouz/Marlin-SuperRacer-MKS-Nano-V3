@@ -78,3 +78,5 @@ void change_fr();
 void change_es();
 void change_de();
 void change_jp();
+void enable_buzzer();
+void disable_buzzer();

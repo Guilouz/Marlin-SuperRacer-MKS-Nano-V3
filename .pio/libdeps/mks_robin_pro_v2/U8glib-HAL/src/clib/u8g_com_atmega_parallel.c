@@ -56,6 +56,7 @@
 
 #ifdef __AVR__
 
+static void u8g_com_atmega_parallel_write(u8g_t *u8g, uint8_t val) U8G_NOINLINE;
 static void u8g_com_atmega_parallel_write(u8g_t *u8g, uint8_t val)
 {
 

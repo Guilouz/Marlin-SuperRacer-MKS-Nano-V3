@@ -57,6 +57,10 @@ void *u8g_buf_lower_limit;
 void *u8g_buf_upper_limit;
 #endif
 
+void u8g_pb8h1_Init(u8g_pb_t *b, void *buf, u8g_uint_t width) U8G_NOINLINE;
+void u8g_pb8h1_set_pixel(u8g_pb_t *b, u8g_uint_t x, u8g_uint_t y, uint8_t color_index) U8G_NOINLINE;
+void u8g_pb8h1_SetPixel(u8g_pb_t *b, const u8g_dev_arg_pixel_t * const arg_pixel) U8G_NOINLINE ;
+void u8g_pb8h1_Set8PixelStd(u8g_pb_t *b, u8g_dev_arg_pixel_t *arg_pixel) U8G_NOINLINE;
 uint8_t u8g_dev_pb8h1_base_fn(u8g_t *u8g, u8g_dev_t *dev, uint8_t msg, void *arg);
 
 
@@ -73,6 +77,7 @@ struct u8g_pb_h1_struct
 
 static uint8_t u8g_pb8h1_bitmask[8] = { 0x080, 0x040, 0x020, 0x010, 0x008, 0x004, 0x002, 0x001 };
 
+static void u8g_pb8h1_state_right(struct u8g_pb_h1_struct *s)  U8G_NOINLINE;
 static void u8g_pb8h1_state_right(struct u8g_pb_h1_struct *s)
 {
   register u8g_uint_t x;
@@ -109,6 +114,7 @@ static void u8g_pb8h1_state_up(struct u8g_pb_h1_struct *s)
   s->ptr -= s->line_byte_len;
 }
 
+static void u8g_pb8h1_state_init(struct u8g_pb_h1_struct *s, u8g_pb_t *b, u8g_uint_t x, u8g_uint_t y) U8G_NOINLINE;
 static void u8g_pb8h1_state_init(struct u8g_pb_h1_struct *s, u8g_pb_t *b, u8g_uint_t x, u8g_uint_t y)
 {
   u8g_uint_t tmp;
@@ -140,6 +146,7 @@ static void u8g_pb8h1_state_init(struct u8g_pb_h1_struct *s, u8g_pb_t *b, u8g_ui
   s->ptr = ptr;
 }
 
+static void u8g_pb8h1_state_set_pixel(struct u8g_pb_h1_struct *s, uint8_t color_index) U8G_NOINLINE;
 static void u8g_pb8h1_state_set_pixel(struct u8g_pb_h1_struct *s, uint8_t color_index)
 {
 

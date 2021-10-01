@@ -60,6 +60,7 @@
 extern int my_print_state;//新增
 extern bool tmc_jump;//新增
 extern uint16_t Flsun_language;//新增
+extern bool buzzer_flag;//新增
 
 #include "feature/pause.h"
 #include "sd/cardreader.h"
@@ -882,9 +883,11 @@ inline void tmc_standby_setup() {
  *    • Max7219
  */
 void setup() {
+
   #ifdef FASTIO_INIT
     FASTIO_INIT();
   #endif
+
   tmc_standby_setup();  // TMC Low Power Standby pins must be set early or they're not usable
 
   #if ENABLED(MARLIN_DEV_MODE)
@@ -1273,7 +1276,7 @@ void setup() {
 
   setFLSunLanguage(Flsun_language);
   setFLSunHours(total_time);
-  print_thr_adress_string(0x13,0x40,"V1.2.1");//显示版本号
+  print_thr_adress_string(0x13,0x40,"V1.3");//显示版本号
   print_thr_adress_string(0x13,0x30,"Marlin 2.0.8");//显示版本号
   if(recovery.exists())//新增
   {
@@ -1284,7 +1287,15 @@ void setup() {
   {
     jump_to(01);
   }
-  
+
+  if(buzzer_flag)
+  {
+    enable_buzzer();
+  }
+  else
+  {
+    disable_buzzer();
+  }
 }
 
 void setFLSunHours(const millis_t time) {

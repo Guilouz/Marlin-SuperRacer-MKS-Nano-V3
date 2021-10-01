@@ -59,6 +59,7 @@
 #include <avr/interrupt.h>
 #include <avr/io.h>
 
+static uint8_t u8g_atxmega_st7920_hw_spi_shift_out(u8g_t *u8g, uint8_t val) U8G_NOINLINE;
 static uint8_t u8g_atxmega_st7920_hw_spi_shift_out(u8g_t *u8g, uint8_t val)
 {
   /* send data */
@@ -72,6 +73,7 @@ static uint8_t u8g_atxmega_st7920_hw_spi_shift_out(u8g_t *u8g, uint8_t val)
 }
 
 
+static void u8g_com_atxmega_st7920_write_byte_hw_spi(u8g_t *u8g, uint8_t rs, uint8_t val) U8G_NOINLINE;
 static void u8g_com_atxmega_st7920_write_byte_hw_spi(u8g_t *u8g, uint8_t rs, uint8_t val)
 {
   uint8_t i;

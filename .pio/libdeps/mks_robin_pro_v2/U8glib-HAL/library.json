@@ -8,14 +8,14 @@
     "type": "git",
     "url": "https://github.com/MarlinFirmware/U8glib-HAL.git"
   },
-  "version": "0.4.5",
+  "version": "0.4.3",
   "authors":
   [
     {
         "url": null,
         "maintainer": false,
-        "email": "u8glib@thinkyhead.com",
-        "name": "Scott Lahteine"
+        "email": "olikraus@gmail.com",
+        "name": "Oliver Kraus"
     }
   ],
   "frameworks": "*",

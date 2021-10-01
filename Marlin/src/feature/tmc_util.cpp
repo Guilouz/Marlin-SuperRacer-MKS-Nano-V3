@@ -1220,6 +1220,15 @@ void test_tmc_connection(const bool test_x, const bool test_y, const bool test_z
   if (test_x) {
     #if AXIS_IS_TMC(X)
       axis_connection += test_connection(stepperX);
+      if(test_connection(stepperX) == 0)//新增，TMC驱动显示状态
+        {
+          print_thr_adress_string(0x35,0x00,"OK");
+        }
+        else
+        {
+          print_thr_adress_string(0x35,0x00,"error");
+        }
+        
     #endif
     #if AXIS_IS_TMC(X2)
       axis_connection += test_connection(stepperX2);
@@ -1229,6 +1238,14 @@ void test_tmc_connection(const bool test_x, const bool test_y, const bool test_z
   if (test_y) {
     #if AXIS_IS_TMC(Y)
       axis_connection += test_connection(stepperY);
+      if(test_connection(stepperY) == 0)//新增，TMC驱动显示状态
+        {
+          print_thr_adress_string(0x35,0x10,"OK");
+        }
+        else
+        {
+          print_thr_adress_string(0x35,0x10,"error");
+        }
     #endif
     #if AXIS_IS_TMC(Y2)
       axis_connection += test_connection(stepperY2);
@@ -1238,6 +1255,14 @@ void test_tmc_connection(const bool test_x, const bool test_y, const bool test_z
   if (test_z) {
     #if AXIS_IS_TMC(Z)
       axis_connection += test_connection(stepperZ);
+      if(test_connection(stepperZ) == 0)//新增，TMC驱动显示状态
+        {
+          print_thr_adress_string(0x35,0x20,"OK");
+        }
+        else
+        {
+          print_thr_adress_string(0x35,0x20,"error");
+        }
     #endif
     #if AXIS_IS_TMC(Z2)
       axis_connection += test_connection(stepperZ2);
@@ -1253,6 +1278,14 @@ void test_tmc_connection(const bool test_x, const bool test_y, const bool test_z
   if (test_e) {
     #if AXIS_IS_TMC(E0)
       axis_connection += test_connection(stepperE0);
+      if(test_connection(stepperE0) == 0)//新增，TMC驱动显示状态
+        {
+          print_thr_adress_string(0x35,0x30,"OK");
+        }
+        else
+        {
+          print_thr_adress_string(0x35,0x30,"error");
+        }
     #endif
     #if AXIS_IS_TMC(E1)
       axis_connection += test_connection(stepperE1);

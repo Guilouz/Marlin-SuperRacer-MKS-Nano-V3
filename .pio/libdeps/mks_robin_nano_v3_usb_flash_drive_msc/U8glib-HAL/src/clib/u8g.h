@@ -71,6 +71,7 @@ extern "C" {
 
 /*===============================================================*/
 #ifdef __GNUC__
+#  define U8G_NOINLINE __attribute__((noinline))
 #  define U8G_PURE  __attribute__ ((pure))
 #  define U8G_NOCOMMON __attribute__ ((nocommon))
 #  define U8G_SECTION(name) __attribute__ ((section (name)))
@@ -82,6 +83,7 @@ extern "C" {
 #    define U8G_FONT_SECTION(name) U8G_SECTION(".progmem." name)
 #  endif
 #else
+#  define U8G_NOINLINE
 #  define U8G_PURE
 #  define U8G_NOCOMMON
 #  define U8G_SECTION(name)
@@ -970,9 +972,9 @@ struct _u8g_page_t
 };
 typedef struct _u8g_page_t u8g_page_t;
 
-void u8g_page_First(u8g_page_t *p);                                                                                        /* u8g_page.c */
-void u8g_page_Init(u8g_page_t *p, u8g_uint_t page_height, u8g_uint_t total_height );            /* u8g_page.c */
-uint8_t u8g_page_Next(u8g_page_t *p);                                                                                   /* u8g_page.c */
+void u8g_page_First(u8g_page_t *p) U8G_NOINLINE;                                                                                        /* u8g_page.c */
+void u8g_page_Init(u8g_page_t *p, u8g_uint_t page_height, u8g_uint_t total_height ) U8G_NOINLINE;            /* u8g_page.c */
+uint8_t u8g_page_Next(u8g_page_t *p) U8G_NOINLINE;                                                                                   /* u8g_page.c */
 
 /*===============================================================*/
 /* page buffer (pb) */
@@ -1014,8 +1016,8 @@ u8g_pb_t name##_pb = { {page_height, height, 0, 0, 0},  width, name##_buf}; \
 u8g_dev_t name = { dev_fn, &name##_pb, com_fn }
 
 
-void u8g_pb8v1_Init(u8g_pb_t *b, void *buf, u8g_uint_t width);
-void u8g_pb8v1_Clear(u8g_pb_t *b);
+void u8g_pb8v1_Init(u8g_pb_t *b, void *buf, u8g_uint_t width)   U8G_NOINLINE;
+void u8g_pb8v1_Clear(u8g_pb_t *b) U8G_NOINLINE;
 
 uint8_t u8g_pb8v1_IsYIntersection(u8g_pb_t *b, u8g_uint_t v0, u8g_uint_t v1);
 uint8_t u8g_pb8v1_IsXIntersection(u8g_pb_t *b, u8g_uint_t v0, u8g_uint_t v1);
@@ -1124,6 +1126,7 @@ typedef void (*u8g_state_cb)(uint8_t msg);
 #define U8G_PI_RW 13
 
 #define U8G_PIN_LIST_LEN 14
+
 
 #define U8G_PIN_DUMMY 254
 #define U8G_PIN_NONE 255
@@ -1287,8 +1290,8 @@ void u8g_SetScale2x2(u8g_t *u8g);
 /* u8g_font.c */
 
 size_t u8g_font_GetSize(const void *font);
-uint8_t u8g_font_GetFontStartEncoding(const void *font);
-uint8_t u8g_font_GetFontEndEncoding(const void *font);
+uint8_t u8g_font_GetFontStartEncoding(const void *font) U8G_NOINLINE;
+uint8_t u8g_font_GetFontEndEncoding(const void *font) U8G_NOINLINE;
 
 void u8g_SetFont(u8g_t *u8g, const u8g_fntpgm_uint8_t *font);
 
@@ -1344,7 +1347,7 @@ u8g_uint_t u8g_GetStrPixelWidth(u8g_t *u8g, const char *s);
 u8g_uint_t u8g_GetStrPixelWidthP(u8g_t *u8g, const u8g_pgm_uint8_t *s);
 int8_t u8g_GetStrX(u8g_t *u8g, const char *s);
 int8_t u8g_GetStrXP(u8g_t *u8g, const u8g_pgm_uint8_t *s);
-u8g_uint_t u8g_GetStrWidth(u8g_t *u8g, const char *s);
+u8g_uint_t u8g_GetStrWidth(u8g_t *u8g, const char *s) U8G_NOINLINE;
 u8g_uint_t u8g_GetStrWidthP(u8g_t *u8g, const u8g_pgm_uint8_t *s);
 
 u8g_uint_t u8g_DrawStrFontBBX(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, uint8_t dir, const char *s);
@@ -1357,15 +1360,15 @@ u8g_uint_t u8g_DrawAAStr(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, const char *s);
 
 /* u8g_rect.c */
 
-void u8g_draw_box(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t w, u8g_uint_t h);
+void u8g_draw_box(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t w, u8g_uint_t h) U8G_NOINLINE;
 
-void u8g_DrawHLine(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t w);
-void u8g_DrawVLine(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t w);
-void u8g_DrawFrame(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t w, u8g_uint_t h);
-void u8g_DrawBox(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t w, u8g_uint_t h);
+void u8g_DrawHLine(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t w) U8G_NOINLINE;
+void u8g_DrawVLine(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t w) U8G_NOINLINE;
+void u8g_DrawFrame(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t w, u8g_uint_t h) U8G_NOINLINE;
+void u8g_DrawBox(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t w, u8g_uint_t h) U8G_NOINLINE;
 
-void u8g_DrawRFrame(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t w, u8g_uint_t h, u8g_uint_t r);
-void u8g_DrawRBox(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t w, u8g_uint_t h, u8g_uint_t r);
+void u8g_DrawRFrame(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t w, u8g_uint_t h, u8g_uint_t r) U8G_NOINLINE;
+void u8g_DrawRBox(u8g_t *u8g, u8g_uint_t x, u8g_uint_t y, u8g_uint_t w, u8g_uint_t h, u8g_uint_t r) U8G_NOINLINE;
 
 /* u8g_bitmap.c */
 
@@ -1401,8 +1404,8 @@ void u8g_DrawEllipseRect(u8g_t *u8g, u8g_uint_t x0, u8g_uint_t y0, u8g_uint_t x1
 #define U8G_DRAW_LOWER_RIGHT  0x08
 #define U8G_DRAW_ALL (U8G_DRAW_UPPER_RIGHT|U8G_DRAW_UPPER_LEFT|U8G_DRAW_LOWER_RIGHT|U8G_DRAW_LOWER_LEFT)
 
-void u8g_draw_circle(u8g_t *u8g, u8g_uint_t x0, u8g_uint_t y0, u8g_uint_t rad, uint8_t option);
-void u8g_draw_disc(u8g_t *u8g, u8g_uint_t x0, u8g_uint_t y0, u8g_uint_t rad, uint8_t option);
+void u8g_draw_circle(u8g_t *u8g, u8g_uint_t x0, u8g_uint_t y0, u8g_uint_t rad, uint8_t option) U8G_NOINLINE;
+void u8g_draw_disc(u8g_t *u8g, u8g_uint_t x0, u8g_uint_t y0, u8g_uint_t rad, uint8_t option) U8G_NOINLINE;
 
 void u8g_DrawCircle(u8g_t *u8g, u8g_uint_t x0, u8g_uint_t y0, u8g_uint_t rad, uint8_t option);
 void u8g_DrawDisc(u8g_t *u8g, u8g_uint_t x0, u8g_uint_t y0, u8g_uint_t rad, uint8_t option);
@@ -1427,6 +1430,8 @@ void u8g_DrawCursor(u8g_t *u8g);
 /* u8g_polygon.c */
 
 typedef int16_t pg_word_t;
+
+#define PG_NOINLINE U8G_NOINLINE
 
 struct pg_point_struct
 {
@@ -1506,15 +1511,15 @@ void st_Step(uint8_t player_pos, uint8_t is_auto_fire, uint8_t is_fire);
 #define U8G_I2C_ERR_TIMEOUT 0x01
 #define U8G_I2C_ERR_BUS 0x02
 
-void u8g_i2c_clear_error(void);
-uint8_t  u8g_i2c_get_error(void);
-uint8_t u8g_i2c_get_err_pos(void);
-void u8g_i2c_init(uint8_t options);    /* use U8G_I2C_OPT_NONE as options */
-uint8_t u8g_i2c_wait(uint8_t mask, uint8_t pos);
-uint8_t u8g_i2c_start(uint8_t sla);
-uint8_t u8g_i2c_send_byte(uint8_t data);
-uint8_t u8g_i2c_send_mode(uint8_t mode);
-void u8g_i2c_stop(void);
+void u8g_i2c_clear_error(void) U8G_NOINLINE;
+uint8_t  u8g_i2c_get_error(void) U8G_NOINLINE;
+uint8_t u8g_i2c_get_err_pos(void) U8G_NOINLINE;
+void u8g_i2c_init(uint8_t options) U8G_NOINLINE;    /* use U8G_I2C_OPT_NONE as options */
+uint8_t u8g_i2c_wait(uint8_t mask, uint8_t pos) U8G_NOINLINE;
+uint8_t u8g_i2c_start(uint8_t sla) U8G_NOINLINE;
+uint8_t u8g_i2c_send_byte(uint8_t data) U8G_NOINLINE;
+uint8_t u8g_i2c_send_mode(uint8_t mode) U8G_NOINLINE;
+void u8g_i2c_stop(void) U8G_NOINLINE;
 
 
 /*===============================================================*/
@@ -1537,6 +1542,18 @@ void u8g_MicroDelay(void);
 
 /* delay by 10 microseconds */
 void u8g_10MicroDelay(void);
+
+/*===============================================================*/
+/* chessengine.c */
+#define CHESS_KEY_NONE 0
+#define CHESS_KEY_NEXT 1
+#define CHESS_KEY_PREV 2
+#define CHESS_KEY_SELECT 3
+#define CHESS_KEY_BACK 4
+
+void chess_Init(u8g_t *u8g, uint8_t empty_body_color);
+void chess_Draw(void);
+void chess_Step(uint8_t keycode);
 
 /*===============================================================*/
 /* font definitions */

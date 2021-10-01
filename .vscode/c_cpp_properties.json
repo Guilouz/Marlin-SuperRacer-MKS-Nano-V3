@@ -8,14 +8,14 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "/Users/cyril/Desktop/FLSUN SuperRacer/Firmwares/Firmware Custom/NanoV3-TFcard/Marlin",
-                "/Users/cyril/Desktop/FLSUN SuperRacer/Firmwares/Firmware Custom/NanoV3-TFcard/.pio/libdeps/mks_robin_nano_v3_usb_flash_drive_msc/QRCode",
+                "/Users/cyril/Desktop/custome_nano_v3_TFcard_1.3/NanoV3/Marlin",
+                "/Users/cyril/Desktop/custome_nano_v3_TFcard_1.3/NanoV3/.pio/libdeps/mks_robin_nano_v3_usb_flash_drive_msc/QRCode",
                 "/Users/cyril/.platformio/packages/framework-arduinoststm32/libraries/EEPROM/src",
                 "/Users/cyril/.platformio/packages/framework-arduinoststm32/libraries/IWatchdog/src",
                 "/Users/cyril/.platformio/packages/framework-arduinoststm32/libraries/Servo/src",
-                "/Users/cyril/Desktop/FLSUN SuperRacer/Firmwares/Firmware Custom/NanoV3-TFcard/.pio/libdeps/mks_robin_nano_v3_usb_flash_drive_msc/LiquidCrystal",
+                "/Users/cyril/Desktop/custome_nano_v3_TFcard_1.3/NanoV3/.pio/libdeps/mks_robin_nano_v3_usb_flash_drive_msc/LiquidCrystal",
                 "/Users/cyril/.platformio/packages/framework-arduinoststm32/libraries/Wire/src",
-                "/Users/cyril/Desktop/FLSUN SuperRacer/Firmwares/Firmware Custom/NanoV3-TFcard/.pio/libdeps/mks_robin_nano_v3_usb_flash_drive_msc/TMCStepper/src",
+                "/Users/cyril/Desktop/custome_nano_v3_TFcard_1.3/NanoV3/.pio/libdeps/mks_robin_nano_v3_usb_flash_drive_msc/TMCStepper/src",
                 "/Users/cyril/.platformio/packages/framework-arduinoststm32/libraries/SoftwareSerial/src",
                 "/Users/cyril/.platformio/packages/framework-arduinoststm32/libraries/SPI/src",
                 "/Users/cyril/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
@@ -58,14 +58,14 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "/Users/cyril/Desktop/FLSUN SuperRacer/Firmwares/Firmware Custom/NanoV3-TFcard/Marlin",
-                    "/Users/cyril/Desktop/FLSUN SuperRacer/Firmwares/Firmware Custom/NanoV3-TFcard/.pio/libdeps/mks_robin_nano_v3_usb_flash_drive_msc/QRCode",
+                    "/Users/cyril/Desktop/custome_nano_v3_TFcard_1.3/NanoV3/Marlin",
+                    "/Users/cyril/Desktop/custome_nano_v3_TFcard_1.3/NanoV3/.pio/libdeps/mks_robin_nano_v3_usb_flash_drive_msc/QRCode",
                     "/Users/cyril/.platformio/packages/framework-arduinoststm32/libraries/EEPROM/src",
                     "/Users/cyril/.platformio/packages/framework-arduinoststm32/libraries/IWatchdog/src",
                     "/Users/cyril/.platformio/packages/framework-arduinoststm32/libraries/Servo/src",
-                    "/Users/cyril/Desktop/FLSUN SuperRacer/Firmwares/Firmware Custom/NanoV3-TFcard/.pio/libdeps/mks_robin_nano_v3_usb_flash_drive_msc/LiquidCrystal",
+                    "/Users/cyril/Desktop/custome_nano_v3_TFcard_1.3/NanoV3/.pio/libdeps/mks_robin_nano_v3_usb_flash_drive_msc/LiquidCrystal",
                     "/Users/cyril/.platformio/packages/framework-arduinoststm32/libraries/Wire/src",
-                    "/Users/cyril/Desktop/FLSUN SuperRacer/Firmwares/Firmware Custom/NanoV3-TFcard/.pio/libdeps/mks_robin_nano_v3_usb_flash_drive_msc/TMCStepper/src",
+                    "/Users/cyril/Desktop/custome_nano_v3_TFcard_1.3/NanoV3/.pio/libdeps/mks_robin_nano_v3_usb_flash_drive_msc/TMCStepper/src",
                     "/Users/cyril/.platformio/packages/framework-arduinoststm32/libraries/SoftwareSerial/src",
                     "/Users/cyril/.platformio/packages/framework-arduinoststm32/libraries/SPI/src",
                     "/Users/cyril/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
@@ -107,7 +107,7 @@
                 ]
             },
             "defines": [
-                "PLATFORMIO=50101",
+                "PLATFORMIO=50200",
                 "STM32F407xx",
                 "STM32F4",
                 "__MARLIN_FIRMWARE__",
@@ -125,6 +125,7 @@
                 "USBD_IRQ_SUBPRIO=6",
                 "USE_USB_HS_IN_FS",
                 "USBD_USE_CDC_MSC",
+                "BOARD_F_CPU=168000000L",
                 "STM32F4xx",
                 "ARDUINO=10808",
                 "ARDUINO_ARCH_STM32",
@@ -136,7 +137,7 @@
             ],
             "cStandard": "c11",
             "cppStandard": "c++14",
-            "compilerPath": "/Users/cyril/.platformio/packages/toolchain-gccarmnoneeabi@1.90201.191206/bin/arm-none-eabi-gcc",
+            "compilerPath": "/Users/cyril/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc",
             "compilerArgs": [
                 "-mfpu=fpv4-sp-d16",
                 "-mfloat-abi=hard",

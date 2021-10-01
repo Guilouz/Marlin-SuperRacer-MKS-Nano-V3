@@ -176,6 +176,7 @@ typedef struct {
 
 
 
+//static uint8_t u8g_spi_out(uint8_t data) U8G_NOINLINE;
 static uint8_t u8g_spi_out(uint8_t data)
 {
   /* unsigned char x = 100; */
