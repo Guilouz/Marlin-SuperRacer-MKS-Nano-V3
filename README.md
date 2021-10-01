@@ -26,7 +26,7 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
 - Bed Skew Compensation support (https://www.thingiverse.com/thing:2563185)
 - G26 - Mesh Validation Pattern support
 - G33 - Delta Auto Calibration support
-- Enabled Hotend idle timeout (15 minutes)
+- Enabled Stealthchop for extruder
 - Disabled Power Loss Recovery because not correctly implemented, repeated writes to the EEPROM are performed. Not good for EEPROM.
 - Binary file transfert support to transfer and update the firmware remotely
 - Enabled host prompt support
