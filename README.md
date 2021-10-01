@@ -80,6 +80,25 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
 
 Link for a terminal: [Printrun (ex Pronterface)](https://github.com/kliment/Printrun/releases)
 
+## Screen firmware:
+
+This Marlin firmware also requires updating the screen firmware, follow these instructions :
+
+- Format microSD to FAT32 with allocation unit size to 4096
+- Extract screen firmware zip file and copy `DWIN_SET` folder to the root of the microSD card
+- Turn off printer
+- Remove the screen cover and insert the card into the microSD slot
+- Turn on the printer
+- Screen firmware installation begins immediately, you will see several scrolling lines
+- When the `END !` appears on the screen, turn off printer and remove the microSD card
+- Installation is complete, you can replace the screen cover and turn the printer back on
+
+![Capture d’écran 2021-10-01 à 18 59 01](https://user-images.githubusercontent.com/12702322/135659357-a9c7a9f5-7072-4fe7-be97-77d400bde2d0.jpg)
+
+
+Screen firmware is available here : [Screen Firmware V1.3](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/files/7268772/Screen.Firmware.V1.3.zip)
+
+
 ## Possible changes :
 
 - If you have `SKR 1.3` motherboard, set these values :
