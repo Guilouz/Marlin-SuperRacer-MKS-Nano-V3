@@ -50,6 +50,8 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
 - It's possible after flash you loose text on TFT screen, select your language again and save.
 - Do an EEPROM reset again (command `M502` followed by command `M500` in a terminal or with the TFT screen).
 - Restart the printer.
+- Stop redundant "Not SD Printing" commands:
+    - `M27 S0`
 - Launch a Nozzle PID in a terminal:
     - `M303 E0 S220 C8`
     - Retrieve the values `Kp`, `Ki` and `Kd` then:
