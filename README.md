@@ -79,6 +79,7 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
     - `G33`
     - Then `M500` to save.
 - Start auto-leveling from the TFT screen menu and adjust Z-Offset. Don't forget to save.
+- Perform a full format of your SD card (not a quick format) to avoid problems afterwards.
 
 Link for a terminal: [Printrun (ex Pronterface)](https://github.com/kliment/Printrun/releases)
 
@@ -87,7 +88,7 @@ Link for a terminal: [Printrun (ex Pronterface)](https://github.com/kliment/Prin
 This Marlin firmware also requires updating the screen firmware, follow these instructions :
 
 - Format microSD to FAT32 with allocation unit size to 4096.
-- Extract screen firmware zip file here : [Screen Firmware V1.3](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/files/7268772/Screen.Firmware.V1.3.zip) and copy `DWIN_SET` folder to the root of the microSD card.
+- Extract screen firmware zip file here : [Screen Firmware V1.3 Stock from FLSUN](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/files/7268772/Screen.Firmware.V1.3.zip) and copy `DWIN_SET` folder to the root of the microSD card.
 - Turn off printer.
 - Remove the screen cover and insert the card into the microSD slot.
 - Turn on the printer.
