@@ -109,9 +109,11 @@ This Marlin firmware also requires updating the screen firmware, follow these in
 
 - If you want to use `microSD` port :
   - In Configuration_adv.h : `//#define USB_FLASH_DRIVE_SUPPORT`
+  - In Configuration_adv.h : `//#define USE_OTG_USB_HOST`
 
 - If you want to use `USB` port :
   - In Configuration_adv.h : `#define USB_FLASH_DRIVE_SUPPORT`
+  - In Configuration_adv.h : `#define USE_OTG_USB_HOST`
 
 
 If you need to make any changes in sources files, please read this for compilation: [here](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/tree/main/_README)
