@@ -100,11 +100,11 @@ This Marlin firmware also requires updating the screen firmware, follow these in
 
 ## Possible changes :
 
-- If you want to use `microSD` port :
+- If you want to use `microSD` port, set these values :
   - In Configuration_adv.h : `//#define USB_FLASH_DRIVE_SUPPORT`
   - In Configuration_adv.h : `//#define USE_OTG_USB_HOST`
 
-- If you want to use `USB` port :
+- If you want to use `USB` port, set these values :
   - In Configuration_adv.h : `#define USB_FLASH_DRIVE_SUPPORT`
   - In Configuration_adv.h : `#define USE_OTG_USB_HOST`
 
