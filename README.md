@@ -120,7 +120,7 @@ This Marlin firmware also requires updating the screen firmware, follow these in
     - Dans Configuration.h : `#define INVERT_E0_DIR true`
     - Dans Configuration_adv.h : `#define E0_CURRENT      1050`
 
-  - If you have `BONDTECH LGX EXTRUDEUR (BOWDEN)`, set these values :
+- If you have `BONDTECH LGX EXTRUDEUR (BOWDEN)`, set these values :
     - Dans Configuration.h : `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 400 }`
     - Dans Configuration.h : `#define INVERT_E0_DIR false`
     - Dans Configuration_adv.h : `#define E0_CURRENT      600`
