@@ -100,13 +100,6 @@ This Marlin firmware also requires updating the screen firmware, follow these in
 
 ## Possible changes :
 
-- If you have `SKR 1.3` motherboard, set these values :
-  - In platformio.ini : `default_envs = LPC1768`
-  - In Configuration.h : `#define MOTHERBOARD BOARD_BTT_SKR_V1_3`
-  - In Configuration.h : `#define SERIAL_PORT -1`
-  - In Configuration.h : `#define SERIAL_PORT_2 0`
-  - In Configuration_adv.h : `#define E0_AUTO_FAN_PIN P2_04`
-
 - If you want to use `microSD` port :
   - In Configuration_adv.h : `//#define USB_FLASH_DRIVE_SUPPORT`
   - In Configuration_adv.h : `//#define USE_OTG_USB_HOST`
@@ -115,6 +108,23 @@ This Marlin firmware also requires updating the screen firmware, follow these in
   - In Configuration_adv.h : `#define USB_FLASH_DRIVE_SUPPORT`
   - In Configuration_adv.h : `#define USE_OTG_USB_HOST`
 
+- If you have `SKR 1.3` motherboard, set these values :
+  - In platformio.ini : `default_envs = LPC1768`
+  - In Configuration.h : `#define MOTHERBOARD BOARD_BTT_SKR_V1_3`
+  - In Configuration.h : `#define SERIAL_PORT -1`
+  - In Configuration.h : `#define SERIAL_PORT_2 0`
+  - In Configuration_adv.h : `#define E0_AUTO_FAN_PIN P2_04`
+
+- If you have `OMG-V2-S EXTRUDEUR (BOWDEN)`, set these values :
+    - Dans Configuration.h : `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 385 }`
+    - Dans Configuration.h : `#define INVERT_E0_DIR true`
+    - Dans Configuration_adv.h : `#define E0_CURRENT      1050`
+
+  - If you have `BONDTECH LGX EXTRUDEUR (BOWDEN)`, set these values :
+    - Dans Configuration.h : `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 400 }`
+    - Dans Configuration.h : `#define INVERT_E0_DIR false`
+    - Dans Configuration_adv.h : `#define E0_CURRENT      600`
+    
 
 If you need to make any changes in sources files, please read this for compilation: [here](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/tree/main/_README)
 
