@@ -116,16 +116,40 @@ This Marlin firmware also requires updating the screen firmware, follow these in
   - In Configuration_adv.h : `#define E0_AUTO_FAN_PIN P2_04`
 
 - If you have `OMG-V2-S EXTRUDEUR (BOWDEN)`, set these values :
-    - Dans Configuration.h : `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 385 }`
-    - Dans Configuration.h : `#define INVERT_E0_DIR true`
-    - Dans Configuration_adv.h : `#define E0_CURRENT      1050`
+    - In Configuration.h : `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 385 }`
+    - In Configuration.h : `#define INVERT_E0_DIR true`
+    - In Configuration_adv.h : `#define E0_CURRENT      1050`
 
 - If you have `BONDTECH LGX EXTRUDEUR (BOWDEN)`, set these values :
-    - Dans Configuration.h : `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 400 }`
-    - Dans Configuration.h : `#define INVERT_E0_DIR false`
-    - Dans Configuration_adv.h : `#define E0_CURRENT      600`
+    - In Configuration.h : `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 400 }`
+    - In Configuration.h : `#define INVERT_E0_DIR false`
+    - In Configuration_adv.h : `#define E0_CURRENT      650`
+
+- If you have `BONDTECH LGX LITE EXTRUDEUR (DIRECT DRIVE)`, set these values :
+    - In Configuration.h : `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 562 }`
+    - In Configuration.h : `#define INVERT_E0_DIR false`
+    - In Configuration_adv.h : `#define E0_CURRENT      650`
+    - In Configuration_adv.h : `#define FILAMENT_CHANGE_UNLOAD_LENGTH      70`
+    - In Configuration_adv.h : `#define FILAMENT_CHANGE_FAST_LOAD_LENGTH     70`
     
 
 If you need to make any changes in sources files, please read this for compilation: [here](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/tree/main/_README)
 
 Use VSCode et PlatformIO for compilation (see [here](https://marlinfw.org/docs/basics/install_platformio_vscode.html)).
+
+## Firmware for Bondtech LGX Lite :
+
+<img align="center" width="600" src="https://user-images.githubusercontent.com/12702322/147516889-67b58b86-4929-4c54-921e-f4cf3d9b31af.png" />
+
+Firmware is available here : 
+
+- [SDCARD version](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/files/7795106/SR-LGX-Lite-31-12-2021-SDCARD.zip)
+- [USB version](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/files/7795110/SR-LGX-Lite-31-12-2021-USB.zip)
+
+**Recommanded retraction :**
+
+- Distance : `1.2 mm`
+- Speed : `35 mm/s`
+
+
+**Don't forget to reset EEPROM after flash !**
