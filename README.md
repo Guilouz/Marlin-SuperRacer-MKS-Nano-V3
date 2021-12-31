@@ -143,7 +143,7 @@ Use VSCode et PlatformIO for compilation (see [here](https://marlinfw.org/docs/b
 
 STL files for supports are available here : https://www.thingiverse.com/thing:5138588
 
-Firmware is available here : 
+Firmwares are available here : 
 
 - [SDCARD version](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/files/7795106/SR-LGX-Lite-31-12-2021-SDCARD.zip)
 - [USB version](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/files/7795110/SR-LGX-Lite-31-12-2021-USB.zip)
