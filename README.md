@@ -100,6 +100,10 @@ This Marlin firmware also requires updating the screen firmware, follow these in
 
 ## Possible changes :
 
+If you need to make any changes in sources files, please read this for compilation: [here](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/tree/main/_README)
+
+Use VSCode et PlatformIO for compilation (see [here](https://marlinfw.org/docs/basics/install_platformio_vscode.html)).
+
 - If you want to use `microSD` port, set these values :
   - In Configuration_adv.h : `//#define USB_FLASH_DRIVE_SUPPORT`
   - In Configuration_adv.h : `//#define USE_OTG_USB_HOST`
@@ -131,11 +135,6 @@ This Marlin firmware also requires updating the screen firmware, follow these in
     - In Configuration_adv.h : `#define E0_CURRENT      650`
     - In Configuration_adv.h : `#define FILAMENT_CHANGE_UNLOAD_LENGTH      70`
     - In Configuration_adv.h : `#define FILAMENT_CHANGE_FAST_LOAD_LENGTH     70`
-    
-
-If you need to make any changes in sources files, please read this for compilation: [here](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/tree/main/_README)
-
-Use VSCode et PlatformIO for compilation (see [here](https://marlinfw.org/docs/basics/install_platformio_vscode.html)).
 
 ## Firmware for Bondtech LGX Lite :
 
