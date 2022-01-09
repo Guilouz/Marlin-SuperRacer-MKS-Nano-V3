@@ -98,7 +98,7 @@ This Marlin firmware also requires updating the screen firmware, follow these in
 
 ![Capture d’écran 2021-10-01 à 18 59 01](https://user-images.githubusercontent.com/12702322/135659357-a9c7a9f5-7072-4fe7-be97-77d400bde2d0.jpg)
 
-## Possible changes :
+## Possible changes:
 
 If you need to make any changes in sources files, please read this for compilation: [here](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/tree/main/_README)
 
@@ -136,7 +136,7 @@ Use VSCode et PlatformIO for compilation (see [here](https://marlinfw.org/docs/b
     - In Configuration_adv.h : `#define FILAMENT_CHANGE_UNLOAD_LENGTH      70`
     - In Configuration_adv.h : `#define FILAMENT_CHANGE_FAST_LOAD_LENGTH     70`
 
-## Firmware for Bondtech LGX Lite :
+## Firmware for Bondtech LGX Lite:
 
 <img align="center" width="600" src="https://user-images.githubusercontent.com/12702322/147516889-67b58b86-4929-4c54-921e-f4cf3d9b31af.png" />
 
