@@ -140,7 +140,7 @@ Use VSCode et PlatformIO for compilation (see [here](https://marlinfw.org/docs/b
 
 <img align="center" width="600" src="https://user-images.githubusercontent.com/12702322/147516889-67b58b86-4929-4c54-921e-f4cf3d9b31af.png" />
 
-**RFiles and materials needed:**
+**Files and materials needed:**
 
 <table border="0">
  <tr>
