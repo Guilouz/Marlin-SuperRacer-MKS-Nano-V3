@@ -140,9 +140,50 @@ Use VSCode et PlatformIO for compilation (see [here](https://marlinfw.org/docs/b
 
 <img align="center" width="600" src="https://user-images.githubusercontent.com/12702322/147516889-67b58b86-4929-4c54-921e-f4cf3d9b31af.png" />
 
-STL files for supports are available here : https://www.thingiverse.com/thing:5138588
+**Required:**
 
-Firmwares are available here : 
+<table border="0">
+ <tr>
+ <td>
+ <img align="center" width="300" src="https://user-images.githubusercontent.com/12702322/147864318-2e3b7b31-d254-4b6c-aa89-7d291fbb63d6.png" />
+ </td>
+ <td>
+ <a href="https://www.thingiverse.com/thing:5138588">LGX Lite Support</a>
+ </td>
+ <td>
+- Requires 2 x M3x12 screws to secure the LGX Lite to the bracket<br />
+- Using stock screws to secure everything<br />
+- Requires 2 x 5015 fans (optional)<br />
+- Requires 2 x M3x16 screws for 5015 fans (optional)<br />
+- Requires 2 x M3x20 screws for 5015 fans (optional)
+ </td>
+ </tr>
+ <tr>
+ <td>
+ <img align="center" width="300" src="https://user-images.githubusercontent.com/12702322/147864172-148c6c74-0a0a-4b37-b48e-9f764aec81ea.png" />
+ </td>
+ <td>
+ <a href="https://github.com/Guilouz/Marlin-SuperRacer-SKR2.0-LGX-Lite/files/7798458/Filament.Sensor.Mount.zip">Filament Sensor Mount.zip</a>
+ </td>
+ <td>
+- Using stock screws
+ </td>
+ </tr>
+ <tr>
+ <tr>
+ <td>
+ <img align="center" width="300" src="https://user-images.githubusercontent.com/12702322/147864199-9e521abd-4177-4561-bccf-3736aa711f85.png" />
+ </td>
+ <td>
+ <a href="https://github.com/Guilouz/Marlin-SuperRacer-SKR2.0-LGX-Lite/files/7798461/Cable.Guide.zip">Cable Guide.zip</a>
+ </td>
+ <td>
+- N/A
+ </td>
+ </tr>
+ </table>
+
+**Firmwares are available here:**
 
 - [SDCARD version](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/files/7836105/SR-LGX-Lite-31-12-2021-SDCARD.zip)
 - [USB version](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/files/7836106/SR-LGX-Lite-31-12-2021-USB.zip)
