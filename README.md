@@ -8,7 +8,8 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
 
 <br /><br /><br /><br /><br />
 
-**Marlin 2.0.8 Firmware configured for FLSUN Super Racer with MKS Robin Nano V3 motherboard. Based on FLSUN sources.**
+**Marlin 2.0.8 Firmware configured for FLSUN Super Racer with MKS Robin Nano V3 motherboard. Based on FLSUN sources.**<br />
+**Firmwares are available in [Releases](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/releases) section.**
 
 <br /> <br /> <br /> <br /> <br />
 
