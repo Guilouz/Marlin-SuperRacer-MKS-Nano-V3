@@ -133,9 +133,18 @@ Use VSCode et PlatformIO for compilation (see [here](https://marlinfw.org/docs/b
 - If you have `BONDTECH LGX LITE EXTRUDEUR (DIRECT DRIVE)`, set these values :
     - In Configuration.h : `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 562 }`
     - In Configuration.h : `#define INVERT_E0_DIR false`
+    - In Configuration.h : `#define DEFAULT_MAX_FEEDRATE          { 200, 200, 200, 120 }`
+    - In Configuration.h : `#define DEFAULT_MAX_ACCELERATION      { 6000, 6000, 6000, 1500 }`
+    - In Configuration.h : `#define DEFAULT_ACCELERATION          2500`
+    - In Configuration.h : `#define DEFAULT_RETRACT_ACCELERATION  2000`
+    - In Configuration.h : `#define DEFAULT_XJERK 10.0`
+    - In Configuration.h : `#define DEFAULT_YJERK 10.0`
+    - In Configuration.h : `#define DEFAULT_ZJERK 10.0`
+    - In Configuration.h : `#define DEFAULT_EJERK    2.5`
     - In Configuration_adv.h : `#define E0_CURRENT      650`
     - In Configuration_adv.h : `#define FILAMENT_CHANGE_UNLOAD_LENGTH      70`
     - In Configuration_adv.h : `#define FILAMENT_CHANGE_FAST_LOAD_LENGTH     70`
+    - In Configuration_adv.h : `//#define STEALTHCHOP_E`
 
 ## Firmware for Bondtech LGX Lite:
 
