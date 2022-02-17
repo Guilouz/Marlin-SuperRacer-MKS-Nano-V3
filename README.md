@@ -193,10 +193,10 @@ Use VSCode et PlatformIO for compilation (see [here](https://marlinfw.org/docs/b
  </tr>
  </table>
 
-**Firmwares are available here (for LGX Lite ONLY):**
+**Firmwares for LGX Lite ONLY are available here (Updated 02/17/2022):**
 
-- [SDCARD version](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/files/7836105/SR-LGX-Lite-31-12-2021-SDCARD.zip)
-- [USB version](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/files/7836106/SR-LGX-Lite-31-12-2021-USB.zip)
+- [SDCARD version](https://drive.google.com/file/d/1T0Hh-lMrO7BQ1WbqFYjaixEHRnR5G5W6/view?usp=sharing)
+- [USB version](https://drive.google.com/file/d/1Wi2jG2ooJDL7LyWfFSUFCmzkLHA4cu29/view?usp=sharing)
 
 **Recommanded retraction:**
 
