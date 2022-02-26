@@ -196,10 +196,10 @@ Use VSCode et PlatformIO for compilation (see [here](https://marlinfw.org/docs/b
  </tr>
  </table>
 
-**Firmwares for LGX Lite ONLY are available here (Updated 02/17/2022):**
+**Firmwares for LGX Lite ONLY are available here (Updated 02/26/2022):**
 
-- [SDCARD version](https://drive.google.com/file/d/1T0Hh-lMrO7BQ1WbqFYjaixEHRnR5G5W6/view?usp=sharing)
-- [USB version](https://drive.google.com/file/d/1Wi2jG2ooJDL7LyWfFSUFCmzkLHA4cu29/view?usp=sharing)
+- [SDCARD version](https://drive.google.com/file/d/1N-pL-M5935PsruOtqK3GzbJKVdBr5foe/view?usp=sharing)
+- [USB version](https://drive.google.com/file/d/1rGrQoi8AUiWalMqCLanqL6cPgweyTD0u/view?usp=sharing)
 
 **Recommanded retraction:**
 
