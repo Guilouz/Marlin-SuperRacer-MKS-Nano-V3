@@ -25,6 +25,7 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
 - EEPROM support
 - S-Curve Acceleration support
 - Bed Skew Compensation support (https://www.thingiverse.com/thing:2563185)
+- Delta Diagonal Rod Trim adjustments support
 - G26 - Mesh Validation Pattern support
 - G33 - Delta Auto Calibration support
 - Enabled StealthChop for extruder
@@ -81,6 +82,8 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
     - Then `M500` to save.
 - Start auto-leveling from the TFT screen menu and adjust Z-Offset. Don't forget to save.
 - Perform a full format of your SD card (not a quick format) to avoid problems afterwards.
+- If you want more precision or solve dimension problems, follow the instructions in this Excel file: [Delta Calibration Calculator.zip](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/files/8146727/Delta.Calibration.Calculator.zip)
+
 
 Link for a terminal: [Printrun (ex Pronterface)](https://github.com/kliment/Printrun/releases)
 
