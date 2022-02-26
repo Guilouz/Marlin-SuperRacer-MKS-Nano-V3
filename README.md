@@ -14,7 +14,7 @@ If you like my job, you can support me by paying me a 🍺 or a ☕. Thanks 🙂
 
 ## Downloads:
 
-- Firmwares for Super Racer Stock are available in [Releases](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/releases) section.
+- Firmwares for Super Racer Stock are available in [here](https://github.com/Guilouz/Marlin-SuperRacer-MKS-Nano-V3/releases).
 - Firmwares for Super Racer + Bondtech LGX Lite are available at the bottom of the page.
 
 ## Main features:
