@@ -112,46 +112,52 @@ If you need to make any changes in sources files, please read this for compilati
 
 Use VSCode et PlatformIO for compilation (see [here](https://marlinfw.org/docs/basics/install_platformio_vscode.html)).
 
-- If you want to use `microSD` port, set these values :
-  - In Configuration_adv.h : `//#define USB_FLASH_DRIVE_SUPPORT`
-  - In Configuration_adv.h : `//#define USE_OTG_USB_HOST`
+- If you want to use `microSD` port, set these values:
+  - In Configuration_adv.h: `//#define USB_FLASH_DRIVE_SUPPORT`
+  - In Configuration_adv.h: `//#define USE_OTG_USB_HOST`
 
 - If you want to use `USB` port, set these values :
-  - In Configuration_adv.h : `#define USB_FLASH_DRIVE_SUPPORT`
-  - In Configuration_adv.h : `#define USE_OTG_USB_HOST`
+  - In Configuration_adv.h: `#define USB_FLASH_DRIVE_SUPPORT`
+  - In Configuration_adv.h: `#define USE_OTG_USB_HOST`
 
-- If you have `SKR 1.3` motherboard, set these values :
-  - In platformio.ini : `default_envs = LPC1768`
-  - In Configuration.h : `#define MOTHERBOARD BOARD_BTT_SKR_V1_3`
-  - In Configuration.h : `#define SERIAL_PORT -1`
-  - In Configuration.h : `#define SERIAL_PORT_2 0`
-  - In Configuration_adv.h : `#define E0_AUTO_FAN_PIN P2_04`
+- If you have `SKR 1.3` motherboard, set these values:
+  - In platformio.ini: `default_envs = LPC1768`
+  - In Configuration.h: `#define MOTHERBOARD BOARD_BTT_SKR_V1_3`
+  - In Configuration.h: `#define SERIAL_PORT -1`
+  - In Configuration.h: `#define SERIAL_PORT_2 0`
+  - In Configuration_adv.h: `#define E0_AUTO_FAN_PIN P2_04`
 
-- If you have `OMG-V2-S EXTRUDEUR (BOWDEN)`, set these values :
-    - In Configuration.h : `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 385 }`
-    - In Configuration.h : `#define INVERT_E0_DIR true`
-    - In Configuration_adv.h : `#define E0_CURRENT      1050`
+- If you have `OMG-V2-S EXTRUDEUR (BOWDEN)`, set these values:
+    - In Configuration.h: `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 385 }`
+    - In Configuration.h: `#define INVERT_E0_DIR true`
+    - In Configuration_adv.h: `#define E0_CURRENT      1050`
 
 - If you have `BONDTECH LGX EXTRUDEUR (BOWDEN)`, set these values :
-    - In Configuration.h : `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 400 }`
-    - In Configuration.h : `#define INVERT_E0_DIR false`
-    - In Configuration_adv.h : `#define E0_CURRENT      650`
+    - In Configuration.h: `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 400 }`
+    - In Configuration.h: `#define INVERT_E0_DIR false`
+    - In Configuration_adv.h: `#define E0_CURRENT      650`
 
-- If you have `BONDTECH LGX LITE EXTRUDEUR (DIRECT DRIVE)`, set these values :
-    - In Configuration.h : `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 562 }`
-    - In Configuration.h : `#define INVERT_E0_DIR false`
-    - In Configuration.h : `#define DEFAULT_MAX_FEEDRATE          { 200, 200, 200, 120 }`
-    - In Configuration.h : `#define DEFAULT_MAX_ACCELERATION      { 6000, 6000, 6000, 1500 }`
-    - In Configuration.h : `#define DEFAULT_ACCELERATION          2500`
-    - In Configuration.h : `#define DEFAULT_RETRACT_ACCELERATION  2000`
-    - In Configuration.h : `#define DEFAULT_XJERK 10.0`
-    - In Configuration.h : `#define DEFAULT_YJERK 10.0`
-    - In Configuration.h : `#define DEFAULT_ZJERK 10.0`
-    - In Configuration.h : `#define DEFAULT_EJERK    2.5`
-    - In Configuration_adv.h : `#define E0_CURRENT      650`
-    - In Configuration_adv.h : `#define FILAMENT_CHANGE_UNLOAD_LENGTH      70`
-    - In Configuration_adv.h : `#define FILAMENT_CHANGE_FAST_LOAD_LENGTH     70`
-    - In Configuration_adv.h : `//#define STEALTHCHOP_E`
+- If you have `BONDTECH LGX LITE EXTRUDEUR (DIRECT DRIVE)`, set these values:
+    - In Configuration.h: `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 562 }`
+    - In Configuration.h: `#define INVERT_E0_DIR false`
+    - In Configuration.h: `#define DEFAULT_MAX_FEEDRATE          { 200, 200, 200, 120 }`
+    - In Configuration.h: `#define DEFAULT_MAX_ACCELERATION      { 6000, 6000, 6000, 1500 }`
+    - In Configuration.h: `#define DEFAULT_ACCELERATION          2500`
+    - In Configuration.h: `#define DEFAULT_RETRACT_ACCELERATION  2000`
+    - In Configuration.h: `#define DEFAULT_XJERK 10.0`
+    - In Configuration.h: `#define DEFAULT_YJERK 10.0`
+    - In Configuration.h: `#define DEFAULT_ZJERK 10.0`
+    - In Configuration.h: `#define DEFAULT_EJERK    2.5`
+    - In Configuration_adv.h: `#define E0_CURRENT      650`
+    - In Configuration_adv.h: `#define FILAMENT_CHANGE_UNLOAD_LENGTH      70`
+    - In Configuration_adv.h: `#define FILAMENT_CHANGE_FAST_LOAD_LENGTH     70`
+    - In Configuration_adv.h: `//#define STEALTHCHOP_E`
+
+- If you have `Trianglelab CHC Pro (104NT-4-R025H42G) HEATBLOCK`, set these values:
+    - In Configuration.h: `#define TEMP_SENSOR_0 5`
+    - In Configuration.h: `#define DEFAULT_Kp 13.0091`
+    - In Configuration.h: `#define DEFAULT_Ki 1.9370`
+    - In Configuration.h: `#define DEFAULT_Kd 21.8422`
 
 ## Firmware for Bondtech LGX Lite:
 
