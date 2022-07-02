@@ -119,6 +119,12 @@ Use VSCode et PlatformIO for compilation (see [here](https://marlinfw.org/docs/b
 - If you want to use `USB` port, set these values :
   - In Configuration_adv.h: `#define USB_FLASH_DRIVE_SUPPORT`
   - In Configuration_adv.h: `#define USE_OTG_USB_HOST`
+  
+- If `Trianglelab CHC Pro (104NT-4-R025H42G) HEATBLOCK`, set these values:
+    - In Configuration.h: `#define TEMP_SENSOR_0 5`
+    - In Configuration.h: `#define DEFAULT_Kp 13.0091`
+    - In Configuration.h: `#define DEFAULT_Ki 1.9370`
+    - In Configuration.h: `#define DEFAULT_Kd 21.8422`
 
 - If you have `SKR 1.3` motherboard, set these values:
   - In platformio.ini: `default_envs = LPC1768`
